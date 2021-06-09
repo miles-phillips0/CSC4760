@@ -39,7 +39,7 @@ print(predictedVals)
 print(roc_auc_score(TrueVals, clf.predict(dfTest)))
 print (f1_score(TrueVals, predictedVals))
 
-#test logisticv regression
+#test logistic regression
 lr = LogisticRegression(max_iter=10000)
 lr.fit(X, y)
 print(lr.score(dfTest, TrueVals))
