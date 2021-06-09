@@ -25,6 +25,7 @@ y = df['14']
 df.drop('14', axis = 1)
 X = df
 
+#test svm
 clf = svm.SVC()
 clf.fit(X,y)
 dfTest = pd.read_csv("/home/miles/data/processed.cleveland.test.csv")
@@ -38,6 +39,7 @@ print(predictedVals)
 print(roc_auc_score(TrueVals, clf.predict(dfTest)))
 print (f1_score(TrueVals, predictedVals))
 
+#test logisticv regression
 lr = LogisticRegression(max_iter=10000)
 lr.fit(X, y)
 print(lr.score(dfTest, TrueVals))
